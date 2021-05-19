@@ -10,12 +10,12 @@ def snippet_list(request):
     """
     List all code snippets, or create a new snippet.
     """
-    if request.method == 'GET':
+    if request.method == "GET":
         snippets = Snippet.objects.all()
         serializer = SnippetSerializer(snippets, many=True)
         return JsonResponse(serializer.data, safe=False)
 
-    elif request.method == 'POST':
+    elif request.method == "POST":
         data = JSONParser().parse(request)
         serializer = SnippetSerializer(data=data)
         if serializer.is_valid():
@@ -34,11 +34,11 @@ def snippet_detail(request, pk):
     except Snippet.DoesNotExist:
         return HttpResponse(status=404)
 
-    if request.method == 'GET':
+    if request.method == "GET":
         serializer = SnippetSerializer(snippet)
         return JsonResponse(serializer.data)
 
-    elif request.method == 'PUT':
+    elif request.method == "PUT":
         data = JSONParser().parse(request)
         serializer = SnippetSerializer(snippet, data=data)
         if serializer.is_valid():
@@ -46,6 +46,6 @@ def snippet_detail(request, pk):
             return JsonResponse(serializer.data)
         return JsonResponse(serializer.errors, status=400)
 
-    elif request.method == 'DELETE':
+    elif request.method == "DELETE":
         snippet.delete()
         return HttpResponse(status=204)
