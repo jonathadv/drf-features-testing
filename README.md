@@ -12,6 +12,7 @@ $ pipenv shell
 ````
 
 Start the project
+
 ```bash
 $ django-admin startproject tutorial .
 $ cd tutorial
@@ -20,4 +21,17 @@ $ cd ..
 $ python manage.py migrate
 $ python manage.py createsuperuser --email admin@example.com --username admin
 $ python manage.py runserver
+```
+
+# Tutoral 1
+[Tutorial 1: Serialization](https://www.django-rest-framework.org/tutorial/1-serialization/)
+
+Start the project
+
+```bash
+$ python manage.py startapp snippets
+# Fill the models.py
+$ python manage.py makemigrations snippets
+$ python manage.py migrate
+
 ```
