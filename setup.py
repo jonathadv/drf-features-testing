@@ -25,7 +25,7 @@ class FormatCommand(Command):
 
     def run(self):
         self.status("Formatting...")
-        os.system("{0} -m black .".format(sys.executable))
+        os.system("black .".format(sys.executable))
         sys.exit()
 
 
