@@ -10,9 +10,9 @@ markdown = "*"
 django-filter = "*"
 pygments = "*"
 
-
 [dev-packages]
 black="==21.5b1"
+pylint = "*"
 
 [requires]
 python_version = "3.8"
