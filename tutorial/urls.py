@@ -13,6 +13,7 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+import debug_toolbar
 from django.urls import include, path
 from rest_framework import routers
 from tutorial.quickstart import views
@@ -27,4 +28,5 @@ urlpatterns = [
     path("", include(router.urls)),
     path("", include("snippets.urls")),
     path("api-auth/", include("rest_framework.urls", namespace="rest_framework")),
+    path('__debug__/', include(debug_toolbar.urls)),
 ]

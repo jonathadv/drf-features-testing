@@ -35,3 +35,7 @@ $ python manage.py makemigrations snippets
 $ python manage.py migrate
 
 ```
+
+# Tools
+
+- [Django Debug Toolbar](https://django-debug-toolbar.readthedocs.io/en/latest/)
