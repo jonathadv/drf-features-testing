@@ -10,6 +10,7 @@ markdown = "*"
 django-filter = "*"
 pygments = "*"
 django-debug-toolbar = "*"
+django-logger-panel = "*"
 
 [dev-packages]
 black="==21.5b1"

@@ -29,4 +29,5 @@ urlpatterns = [
     path("", include("snippets.urls")),
     path("api-auth/", include("rest_framework.urls", namespace="rest_framework")),
     path('__debug__/', include(debug_toolbar.urls)),
+    path("", include("django_logger_panel.urls")),
 ]
